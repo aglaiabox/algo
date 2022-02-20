@@ -22,11 +22,10 @@ public class ReverseInteger {
         long res = 0;
 
         for (int i=0 ; i < s.length(); i++) {
-//            if (s.substring(i,i+1).equals('-')){
                 long num = Long.parseLong (s.substring(i,i+1));
                 long n2 = (long) Math.pow(10, i) * num;
                 res += n2;
-//            }
+
         }
         if (isNegative){
             if (res>2147483647) return 0;
